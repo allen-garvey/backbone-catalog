@@ -1,3 +1,12 @@
 #universities-header img{
 	width: 200px;
 }
+.flipster__item{
+	text-align: center;
+}
+.flipster__item .title{
+	display: none;
+}
+.flipster__item.flipster__item--current .title{
+	display: block;
+}
