@@ -13,13 +13,16 @@ var App = Marionette.Application.extend({
 			console.log(app.universities);
 			app.universitiesView = new App.UniversitiesCollectionView({collection: app.universities});
 			app.headerRegion.show(app.universitiesView);
-			$('#universities-header').flipster();
+			$('#universities-header').flipster({onItemSwitch: app.universityClicked });
 			console.log($('#universities-header'));
 		});
 		
   		Backbone.history.start();
   		console.log(this.universitiesView);
   		
+  	},
+  	universityClicked : function(currentItem, previousItem){
+
   	}
 });
 
@@ -46,9 +49,26 @@ App.UniversitiesCollection = Backbone.Collection.extend({
 	},
 	model: App.University,
 	// url : 'https://development.knowledgelinktv.com/knowledgelink_api/universities',
-	url: 'http://localhost/marketing_affiliates/testdata.json',
+	url: 'http://localhost/marketing_affiliates/testdata-universities.json',
 	parse: function(response) {
     	return response.data;
+  	}
+});
+
+App.Course = Backbone.Model.extend({
+
+});
+
+App.CoursesCollection = Backbone.Collection.extend({
+	initialize: function(){
+	},
+	model: App.Course,
+	url: 'http://localhost/marketing_affiliates/testdata-courses.json',
+	parse: function(response) {
+    	var data = _.map(response, function(val, key){ 
+    		return val; }
+    		);
+    	return data;
   	}
 });
 
