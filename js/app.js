@@ -10,15 +10,12 @@ var App = Marionette.Application.extend({
 		var promise = this.universities.fetch();
 		var app = this;
 		promise.done(function(){
-			console.log(app.universities);
 			app.universitiesView = new App.UniversitiesCollectionView({collection: app.universities});
 			app.headerRegion.show(app.universitiesView);
 			$('#universities-header').flipster({onItemSwitch: app.universityClicked });
-			console.log($('#universities-header'));
 		});
 		
   		Backbone.history.start();
-  		console.log(this.universitiesView);
   		
   	},
   	universityClicked : function(currentItem, previousItem){
@@ -40,7 +37,6 @@ App.University = Backbone.Model.extend({
 		};
 		return obj;
 	}
-
 
 });
 
@@ -79,8 +75,6 @@ App.UniversityItemView = Marionette.ItemView.extend({
   template: function(data){ 
   		var template = _.template($('#university-item').html());
   		return  template({model: data});
-	},
-	onRender : function(){
 	}
 });
 
@@ -88,12 +82,9 @@ App.UniversityItemView = Marionette.ItemView.extend({
 App.UniversitiesCollectionView = Marionette.CollectionView.extend({
 	tagName : 'ul',
 	id : 'universities-nav',
-	childView: App.UniversityItemView,
-	onRender : function(){
-	}
+	childView: App.UniversityItemView
 
 });
-
 
 
 var app = new App();
