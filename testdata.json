@@ -1,0 +1,466 @@
+{
+	"data": [
+		{
+			"type": "universities",
+			"id": "1",
+			"attributes": {
+				"blog_id": "100",
+				"name": "chuckreaves",
+				"url": "http:\/\/knowledgelinktv.com\/chuckreaves",
+				"logo_url": "http:\/\/knowledgelinktv.com\/chuckreaves\/wp-content\/uploads\/sites\/100\/2015\/06\/90d3f309d02a68b62adeb8147e403c49-1.png",
+				"site_color": "#10c06c"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "2",
+			"attributes": {
+				"blog_id": "101",
+				"name": "jaytownsend",
+				"url": "http:\/\/knowledgelinktv.com\/jaytownsend",
+				"logo_url": "http:\/\/knowledgelinktv.com\/jaytownsend\/wp-content\/uploads\/sites\/101\/2015\/06\/2e92a308c180555fd6407b07a71ddd27-1.png",
+				"site_color": "#ec2129"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "3",
+			"attributes": {
+				"blog_id": "102",
+				"name": "movethecrowd",
+				"url": "http:\/\/knowledgelinktv.com\/movethecrowd",
+				"logo_url": "http:\/\/knowledgelinktv.com\/wp-content\/themes\/knowledgelink\/logoupload\/logo_movethecrowd_0.jpg",
+				"site_color": "#f78b30"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "4",
+			"attributes": {
+				"blog_id": "103",
+				"name": "FinishRich",
+				"url": "http:\/\/knowledgelinktv.com\/finishrich",
+				"logo_url": "",
+				"site_color": "#00aae4"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "5",
+			"attributes": {
+				"blog_id": "25",
+				"name": "bantherconsulting",
+				"url": "http:\/\/knowledgelinktv.com\/barrybanther",
+				"logo_url": null,
+				"site_color": null
+			}
+		},
+		{
+			"type": "universities",
+			"id": "6",
+			"attributes": {
+				"blog_id": "29",
+				"name": "moki",
+				"url": "http:\/\/knowledgelinktv.com\/flossCourse",
+				"logo_url": null,
+				"site_color": null
+			}
+		},
+		{
+			"type": "universities",
+			"id": "7",
+			"attributes": {
+				"blog_id": "30",
+				"name": "Million Dollar Women",
+				"url": "http:\/\/knowledgelinktv.com\/MDW\/",
+				"logo_url": "http:\/\/knowledgelinktv.com\/MDW\/wp-content\/uploads\/sites\/30\/2015\/06\/logo3.png",
+				"site_color": "#a29061"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "8",
+			"attributes": {
+				"blog_id": "31",
+				"name": "Wedding Industry Insiders",
+				"url": "http:\/\/knowledgelinktv.com\/weddingindustryinsiders\/",
+				"logo_url": null,
+				"site_color": null
+			}
+		},
+		{
+			"type": "universities",
+			"id": "9",
+			"attributes": {
+				"blog_id": "32",
+				"name": "Productivity Portal",
+				"url": "http:\/\/knowledgelinktv.com\/productivityportal",
+				"logo_url": "http:\/\/knowledgelinktv.com\/productivityportal\/wp-content\/uploads\/sites\/32\/2015\/06\/donna-logo.png",
+				"site_color": "#bcdaf2"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "10",
+			"attributes": {
+				"blog_id": "33",
+				"name": "Model1",
+				"url": "http:\/\/knowledgelinktv.com\/model1",
+				"logo_url": "http:\/\/knowledgelinktv.com\/model2\/wp-content\/uploads\/sites\/5\/2015\/06\/logo.png",
+				"site_color": "#00a1e1"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "11",
+			"attributes": {
+				"blog_id": "35",
+				"name": "Asset-Map",
+				"url": "http:\/\/knowledgelinktv.com\/asset-map",
+				"logo_url": "http:\/\/knowledgelinktv.com\/model2\/wp-content\/uploads\/sites\/5\/2015\/06\/logo.png",
+				"site_color": "#00a1e1"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "12",
+			"attributes": {
+				"blog_id": "36",
+				"name": "S B Two",
+				"url": "http:\/\/knowledgelinktv.com\/SBTwo",
+				"logo_url": "http:\/\/knowledgelinktv.com\/wp-content\/themes\/knowledgelink\/logoupload\/edulence.jpg",
+				"site_color": "#00aae4"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "13",
+			"attributes": {
+				"blog_id": "46",
+				"name": "KO Networking",
+				"url": "http:\/\/knowledgelinktv.com\/KONetworking",
+				"logo_url": "http:\/\/knowledgelinktv.com\/KONetworking\/wp-content\/uploads\/sites\/46\/2015\/06\/42f5399eb7b239f872d2fa70511e5524.png",
+				"site_color": "#ce0000"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "14",
+			"attributes": {
+				"blog_id": "47",
+				"name": "Model3",
+				"url": "http:\/\/knowledgelinktv.com\/model3",
+				"logo_url": "http:\/\/knowledgelinktv.com\/model2\/wp-content\/uploads\/sites\/5\/2015\/06\/logo.png",
+				"site_color": "#1e73be"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "15",
+			"attributes": {
+				"blog_id": "49",
+				"name": "hiddenprofitacademy",
+				"url": "http:\/\/knowledgelinktv.com\/hiddenprofitacademy",
+				"logo_url": "http:\/\/knowledgelinktv.com\/wp-content\/themes\/knowledgelink\/logoupload\/hidden_profit_logo_sm.png",
+				"site_color": "#8cc63f"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "16",
+			"attributes": {
+				"blog_id": "50",
+				"name": "selfcareforhealthcare",
+				"url": "http:\/\/knowledgelinktv.com\/selfcareforhealthcare",
+				"logo_url": "http:\/\/knowledgelinktv.com\/selfcareforhealthcare\/wp-content\/uploads\/sites\/50\/2015\/06\/SC4HC-horizontalLogo1.jpg",
+				"site_color": "#00aae4"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "17",
+			"attributes": {
+				"blog_id": "51",
+				"name": "likeablelocal",
+				"url": "http:\/\/knowledgelinktv.com\/likeablelocal",
+				"logo_url": "http:\/\/knowledgelinktv.com\/wp-content\/themes\/knowledgelink\/logoupload\/-1.png",
+				"site_color": "#00aae4"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "18",
+			"attributes": {
+				"blog_id": "54",
+				"name": "curtiszimmerlearning",
+				"url": "http:\/\/knowledgelinktv.com\/curtiszimmerlearning",
+				"logo_url": "",
+				"site_color": "#00aae4"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "19",
+			"attributes": {
+				"blog_id": "55",
+				"name": "alexisfedor",
+				"url": "http:\/\/knowledgelinktv.com\/alexisfedor",
+				"logo_url": "http:\/\/knowledgelinktv.com\/wp-content\/themes\/knowledgelink\/logoupload\/logo_alexis_fedor.jpg",
+				"site_color": "#f20660"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "20",
+			"attributes": {
+				"blog_id": "56",
+				"name": "Know More! Intelligence Center",
+				"url": "http:\/\/knowledgelinktv.com\/knowmore",
+				"logo_url": "http:\/\/knowledgelinktv.com\/knowmore\/wp-content\/uploads\/sites\/56\/2015\/06\/logo-1.png",
+				"site_color": "#3067dd"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "21",
+			"attributes": {
+				"blog_id": "57",
+				"name": "The Cart",
+				"url": "http:\/\/knowledgelinktv.com\/demomodel1",
+				"logo_url": "http:\/\/knowledgelinktv.com\/model2\/wp-content\/uploads\/sites\/5\/2015\/06\/logo.png",
+				"site_color": "#00a1e1"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "22",
+			"attributes": {
+				"blog_id": "58",
+				"name": "The Designer",
+				"url": "http:\/\/knowledgelinktv.com\/demomodel2",
+				"logo_url": "http:\/\/knowledgelinktv.com\/model2\/wp-content\/uploads\/sites\/5\/2015\/06\/logo.png",
+				"site_color": "#00a1e1"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "23",
+			"attributes": {
+				"blog_id": "59",
+				"name": "The Block",
+				"url": "http:\/\/knowledgelinktv.com\/demomodel3",
+				"logo_url": "http:\/\/knowledgelinktv.com\/model2\/wp-content\/uploads\/sites\/5\/2015\/06\/logo.png",
+				"site_color": "#1e73be"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "24",
+			"attributes": {
+				"blog_id": "5",
+				"name": "Model 2",
+				"url": "http:\/\/knowledgelinktv.com\/model2",
+				"logo_url": "http:\/\/knowledgelinktv.com\/model2\/wp-content\/uploads\/sites\/5\/2015\/06\/logo.png",
+				"site_color": "#00a1e1"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "25",
+			"attributes": {
+				"blog_id": "60",
+				"name": "Red Zone University",
+				"url": "http:\/\/knowledgelinktv.com\/RedZoneUniversity",
+				"logo_url": "http:\/\/knowledgelinktv.com\/wp-content\/themes\/knowledgelink\/logoupload\/LOGO_114K-1.jpg",
+				"site_color": "#ad1f0b"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "26",
+			"attributes": {
+				"blog_id": "61",
+				"name": "BrainPoweratwork",
+				"url": "http:\/\/knowledgelinktv.com\/BrainPoweratwork",
+				"logo_url": "http:\/\/knowledgelinktv.com\/wp-content\/themes\/knowledgelink\/logoupload\/TritechnologyLogoDesigns#6.jpg",
+				"site_color": "#00aae4"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "27",
+			"attributes": {
+				"blog_id": "65",
+				"name": "Powered By Ben",
+				"url": "http:\/\/knowledgelinktv.com\/poweredbyben",
+				"logo_url": "http:\/\/knowledgelinktv.com\/poweredbyben\/wp-content\/uploads\/sites\/65\/2015\/06\/yellowlogo11.png",
+				"site_color": "#f2da00"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "28",
+			"attributes": {
+				"blog_id": "66",
+				"name": "harvestwayacademy",
+				"url": "http:\/\/knowledgelinktv.com\/harvestwayacademy",
+				"logo_url": "http:\/\/knowledgelinktv.com\/wp-content\/themes\/knowledgelink\/logoupload\/HarvestLogo_Final.png",
+				"site_color": "#00aae4"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "29",
+			"attributes": {
+				"blog_id": "67",
+				"name": "advisorplusprograms",
+				"url": "http:\/\/knowledgelinktv.com\/advisorplusprograms",
+				"logo_url": "http:\/\/knowledgelinktv.com\/advisorplusprograms\/wp-content\/uploads\/sites\/67\/2015\/06\/logo2-copy.png",
+				"site_color": "#1cadeb"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "30",
+			"attributes": {
+				"blog_id": "69",
+				"name": "TWS",
+				"url": "http:\/\/knowledgelinktv.com\/TWS",
+				"logo_url": "",
+				"site_color": "#00aae4"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "31",
+			"attributes": {
+				"blog_id": "6",
+				"name": "Hold An Audience",
+				"url": "http:\/\/knowledgelinktv.com\/holdanaudience",
+				"logo_url": "http:\/\/knowledgelinktv.com\/holdanaudience\/wp-content\/uploads\/sites\/6\/2015\/06\/holdanaudience_logo.png",
+				"site_color": "#00a1e1"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "32",
+			"attributes": {
+				"blog_id": "70",
+				"name": "elm",
+				"url": "http:\/\/knowledgelinktv.com\/elm",
+				"logo_url": "http:\/\/knowledgelinktv.com\/elm\/wp-content\/uploads\/sites\/70\/2015\/06\/logo1.png",
+				"site_color": "#7bc5f7"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "33",
+			"attributes": {
+				"blog_id": "71",
+				"name": "Model 4",
+				"url": "http:\/\/knowledgelinktv.com\/model4",
+				"logo_url": "http:\/\/knowledgelinktv.com\/model2\/wp-content\/uploads\/sites\/5\/2015\/06\/logo.png",
+				"site_color": "#ff7043"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "34",
+			"attributes": {
+				"blog_id": "73",
+				"name": "demomodel4",
+				"url": "http:\/\/knowledgelinktv.com\/demomodel4",
+				"logo_url": "http:\/\/knowledgelinktv.com\/wp-content\/themes\/knowledgelink\/logoupload\/logo_demomodel4_1.png",
+				"site_color": "#ff7043"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "35",
+			"attributes": {
+				"blog_id": "82",
+				"name": "nsanycspeakeruniversity",
+				"url": "http:\/\/knowledgelinktv.com\/nsanycspeakeruniversity",
+				"logo_url": "http:\/\/knowledgelinktv.com\/nsanycspeakeruniversity\/wp-content\/uploads\/sites\/82\/2016\/01\/logo_nsany.png",
+				"site_color": "#3090a8"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "36",
+			"attributes": {
+				"blog_id": "83",
+				"name": "thelivetodayltp",
+				"url": "http:\/\/knowledgelinktv.com\/thelivetodayltp",
+				"logo_url": "http:\/\/knowledgelinktv.com\/thelivetodayltp\/wp-content\/uploads\/sites\/83\/2015\/06\/banner_thelivetodayltp_0.png",
+				"site_color": "#00377a"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "37",
+			"attributes": {
+				"blog_id": "85",
+				"name": "SBS-Academy",
+				"url": "http:\/\/knowledgelinktv.com\/sbs-academy",
+				"logo_url": "http:\/\/knowledgelinktv.com\/wp-content\/themes\/knowledgelink\/logoupload\/logo_sbs-academy_0.png",
+				"site_color": "#00aae4"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "38",
+			"attributes": {
+				"blog_id": "94",
+				"name": "nsatestone",
+				"url": "http:\/\/knowledgelinktv.com\/nsatestone",
+				"logo_url": "http:\/\/knowledgelinktv.com\/wp-content\/themes\/knowledgelink\/logoupload\/logo_nsatestone_0.jpg",
+				"site_color": "#00aae4"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "39",
+			"attributes": {
+				"blog_id": "96",
+				"name": "ashfordcfg",
+				"url": "http:\/\/knowledgelinktv.com\/ashfordcfg",
+				"logo_url": "",
+				"site_color": "#00aae4"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "40",
+			"attributes": {
+				"blog_id": "97",
+				"name": "IMTCoaching",
+				"url": "http:\/\/knowledgelinktv.com\/imtcoaching",
+				"logo_url": "",
+				"site_color": "#00aae4"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "41",
+			"attributes": {
+				"blog_id": "98",
+				"name": "americanfuneralfinancial",
+				"url": "http:\/\/knowledgelinktv.com\/americanfuneralfinancial",
+				"logo_url": "",
+				"site_color": "#00aae4"
+			}
+		},
+		{
+			"type": "universities",
+			"id": "42",
+			"attributes": {
+				"blog_id": "99",
+				"name": "EONY",
+				"url": "http:\/\/knowledgelinktv.com\/eony",
+				"logo_url": "http:\/\/knowledgelinktv.com\/wp-content\/themes\/knowledgelink\/logoupload\/logo_eony_0.png",
+				"site_color": "#00aae4"
+			}
+		}
+	]
+}
