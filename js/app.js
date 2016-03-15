@@ -1,7 +1,8 @@
 var App = Marionette.Application.extend({
 	initialize: function(options) {
 		this.addRegions({
-  							mainRegion: "#main-content"
+  							mainRegion: "#main-content",
+  							headerRegion: "#universities-header"
 						});
   	},
   	start : function(){
@@ -11,7 +12,9 @@ var App = Marionette.Application.extend({
 		promise.done(function(){
 			console.log(app.universities);
 			app.universitiesView = new App.UniversitiesCollectionView({collection: app.universities});
-			app.mainRegion.show(app.universitiesView);
+			app.headerRegion.show(app.universitiesView);
+			$('#universities-header').flipster();
+			console.log($('#universities-header'));
 		});
 		
   		Backbone.history.start();
@@ -58,16 +61,15 @@ App.UniversityItemView = Marionette.ItemView.extend({
   		return  template({model: data});
 	},
 	onRender : function(){
-		console.log("Item Being rendered");
 	}
 });
 
 
 App.UniversitiesCollectionView = Marionette.CollectionView.extend({
 	tagName : 'ul',
+	id : 'universities-nav',
 	childView: App.UniversityItemView,
 	onRender : function(){
-		console.log("Being rendered");
 	}
 
 });
