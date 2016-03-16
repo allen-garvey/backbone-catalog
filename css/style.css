@@ -10,3 +10,7 @@
 .flipster__item.flipster__item--current .title{
 	display: block;
 }
+
+#university-description{
+	text-align: center;
+}
