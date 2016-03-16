@@ -3,7 +3,8 @@ var App = Marionette.Application.extend({
 		this.addRegions({
   							mainRegion: "#main-content",
   							headerRegion: "#universities-header",
-  							universityDescriptionRegion : '#university-description'
+  							universityDescriptionRegion : '#university-description',
+  							courseListRegion : '#courses-container'
 						});
   	},
   	start : function(){
@@ -26,6 +27,16 @@ var App = Marionette.Application.extend({
   		var university = this.universities.at(index);
   		this.universityDescriptionView = new App.UniversityDescriptionView({model : university});
   		this.universityDescriptionRegion.show(this.universityDescriptionView);
+
+  		var courses = new App.CoursesCollection();
+		var promise = courses.fetch();
+  		var app = this;
+  		promise.done(function(){
+  			var coursesView = new App.CoursesCollectionView({collection: courses});
+  			app.courseListRegion.show(coursesView);
+  		});
+
+
   	},
   	universityClicked : function(currentItem, previousItem){
   		var parentList = $('#universities-nav li');
@@ -90,12 +101,27 @@ App.UniversitiesCollectionView = Marionette.CollectionView.extend({
 
 });
 
+App.CourseItemView = Marionette.ItemView.extend({
+  tagName : 'li',
+  className : 'course_box',
+  template: function(data){ 
+  		var template = _.template($('#course-template').html());
+  		return  template({model: data});
+	}
+});
+
+App.CoursesCollectionView = Marionette.CollectionView.extend({
+	tagName : 'ul',
+	id : 'university-course-list',
+	className: 'container',
+	childView: App.CourseItemView
+
+});
+
 App.UniversityDescriptionView = Marionette.ItemView.extend({
   initialize : function(){
   },
   template: function(data){ 
-  		console.log(data);
-  		console.log("getting template");
   		var template = _.template($('#university-description-template').html());
   		return  template({model: data});
 	}
