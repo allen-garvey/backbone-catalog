@@ -6,6 +6,7 @@ var App = Marionette.Application.extend({
   							universityDescriptionRegion : '#university-description',
   							courseListRegion : '#courses-container'
 						});
+		this.config = options.config;
   	},
   	start : function(){
   		this.universities = new App.UniversitiesCollection();
@@ -29,6 +30,11 @@ var App = Marionette.Application.extend({
   		this.universityDescriptionRegion.show(this.universityDescriptionView);
 
   		var courses = new App.CoursesCollection();
+  		if(this.config.env != 'local'){
+  			var courses_url_suffix = courses.url();
+  			courses.url =  function(){ return university.url() + courses_url_suffix };
+  		}
+  		console.log(courses.url());
 		var promise = courses.fetch();
   		var app = this;
   		promise.done(function(){
@@ -59,8 +65,12 @@ App.UniversitiesCollection = Backbone.Collection.extend({
 	initialize: function(){
 	},
 	model: App.University,
-	// url : 'https://development.knowledgelinktv.com/knowledgelink_api/universities',
-	url: 'testdata-universities.json',
+	url: function(){
+		if(app.config.env != 'local'){
+			return  'https://development.knowledgelinktv.com/knowledgelink_api/universities';
+		}
+		return 'testdata-universities.json';
+	},
 	parse: function(response) {
     	return response.data;
   	}
@@ -74,13 +84,19 @@ App.CoursesCollection = Backbone.Collection.extend({
 	initialize: function(){
 	},
 	model: App.Course,
-	url: 'testdata-courses.json',
+	url: function(){
+		if(app.config.env != 'local'){
+			return '/knowledgelink-api/courses/?courses=all';
+		}
+		return 'testdata-courses.json';
+	},
 	parse: function(response) {
     	var data = _.map(response, function(val, key){ 
     		return val; }
     		);
     	return data;
-  	}
+  	},
+  	parentUniversity : 'hello'
 });
 
 
@@ -128,8 +144,7 @@ App.UniversityDescriptionView = Marionette.ItemView.extend({
 });
 
 
-var app = new App();
-app.start();
+
 
 
 
