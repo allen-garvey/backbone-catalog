@@ -32,7 +32,7 @@ var App = Marionette.Application.extend({
   		var courses = new App.CoursesCollection();
   		if(this.config.env != 'local'){
   			var courses_url_suffix = courses.url();
-  			courses.url =  function(){ return university.url() + courses_url_suffix };
+  			courses.url =  function(){ return university.get('url') + courses_url_suffix };
   		}
   		console.log(courses.url());
 		var promise = courses.fetch();
@@ -56,6 +56,7 @@ App.University = Backbone.Model.extend({
 	parse : function(data, options){
 		var obj = data.attributes;
 		obj.id = data.id;
+		obj.url = obj.url.replace(/^http:/, 'https:'); //make sure url is https for ajax purposes
 		return obj;
 	}
 
