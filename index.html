@@ -11,14 +11,20 @@
     </head>
     <body>
     <div id="main-content">
-    	<div id="universities-header"></div>
+        <div>
+    	   <div id="universities-header"></div>
+            <div id="university-description"></div>
+        </div>
     	<div id="courses-container"></div>
     </div>
     
 
-    <script type="text/template" id="university-item">
+    <script type="text/template" id="university-item-template">
     	<div><img src="<%= model.logo_url %>" alt="<%= model.name %> logo"></div>
     	<div class="title"><%= model.name %></div>
+    </script>
+    <script type="text/template" id="university-description-template">
+        <div><a href="<%= model.url %>"><%= model.name %></a></div>
     </script>
 
 	<script type="text/javascript" src="js/vendor/jquery-2.2.1.min.js"></script>
