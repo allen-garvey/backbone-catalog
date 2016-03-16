@@ -2,24 +2,34 @@ var App = Marionette.Application.extend({
 	initialize: function(options) {
 		this.addRegions({
   							mainRegion: "#main-content",
-  							headerRegion: "#universities-header"
+  							headerRegion: "#universities-header",
+  							universityDescriptionRegion : '#university-description'
 						});
   	},
   	start : function(){
   		this.universities = new App.UniversitiesCollection();
 		var promise = this.universities.fetch();
+		this.currentUniversityIndex = 0;
 		var app = this;
 		promise.done(function(){
 			app.universitiesView = new App.UniversitiesCollectionView({collection: app.universities});
 			app.headerRegion.show(app.universitiesView);
-			$('#universities-header').flipster({onItemSwitch: app.universityClicked });
+			$('#universities-header').flipster({onItemSwitch: app.universityClicked, start: app.currentUniversityIndex });
+			app.displayCurrentUniversity(app.currentUniversityIndex);
 		});
 		
   		Backbone.history.start();
   		
   	},
+  	displayCurrentUniversity : function(index){
+  		this.currentUniversityIndex = index;
+  		var university = this.universities.at(index);
+  		this.universityDescriptionView = new App.UniversityDescriptionView({model : university});
+  		this.universityDescriptionRegion.show(this.universityDescriptionView);
+  	},
   	universityClicked : function(currentItem, previousItem){
-
+  		var parentList = $('#universities-nav li');
+  		app.displayCurrentUniversity(parentList.index(currentItem));
   	}
 });
 
@@ -73,7 +83,7 @@ App.CoursesCollection = Backbone.Collection.extend({
 App.UniversityItemView = Marionette.ItemView.extend({
   tagName : 'li',
   template: function(data){ 
-  		var template = _.template($('#university-item').html());
+  		var template = _.template($('#university-item-template').html());
   		return  template({model: data});
 	}
 });
@@ -84,6 +94,17 @@ App.UniversitiesCollectionView = Marionette.CollectionView.extend({
 	id : 'universities-nav',
 	childView: App.UniversityItemView
 
+});
+
+App.UniversityDescriptionView = Marionette.ItemView.extend({
+  initialize : function(){
+  },
+  template: function(data){ 
+  		console.log(data);
+  		console.log("getting template");
+  		var template = _.template($('#university-description-template').html());
+  		return  template({model: data});
+	}
 });
 
 
