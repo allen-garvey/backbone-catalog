@@ -55,7 +55,7 @@ App.UniversitiesCollection = Backbone.Collection.extend({
 	},
 	model: App.University,
 	// url : 'https://development.knowledgelinktv.com/knowledgelink_api/universities',
-	url: 'http://localhost/marketing_affiliates/testdata-universities.json',
+	url: 'testdata-universities.json',
 	parse: function(response) {
     	return response.data;
   	}
@@ -69,7 +69,7 @@ App.CoursesCollection = Backbone.Collection.extend({
 	initialize: function(){
 	},
 	model: App.Course,
-	url: 'http://localhost/marketing_affiliates/testdata-courses.json',
+	url: 'testdata-courses.json',
 	parse: function(response) {
     	var data = _.map(response, function(val, key){ 
     		return val; }
