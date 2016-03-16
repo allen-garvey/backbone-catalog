@@ -1,3 +1,7 @@
+.container{
+	margin: 0 auto;
+	max-width: 900px;
+}
 #universities-header img{
 	width: 200px;
 }
@@ -14,3 +18,20 @@
 #university-description{
 	text-align: center;
 }
+
+#university-course-list{
+	list-style-type: none;
+}
+.course_image_container{
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+}
+.course_box{
+	box-sizing: border-box;
+	width: 50%;
+	display: inline-block;
+}
+
+
+
