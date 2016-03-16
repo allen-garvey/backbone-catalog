@@ -37,14 +37,8 @@ var App = Marionette.Application.extend({
 
 App.University = Backbone.Model.extend({
 	parse : function(data, options){
-		var obj = {
-			id : data.id,
-			name : data.attributes.name,
-			blog_id : data.attributes.blog_id,
-			url : data.attributes.url,
-			logo_url : data.attributes.logo_url,
-			site_color : data.attributes.site_color
-		};
+		var obj = data.attributes;
+		obj.id = data.id;
 		return obj;
 	}
 
