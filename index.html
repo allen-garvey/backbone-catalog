@@ -24,7 +24,12 @@
     	<div class="title"><%= model.name %></div>
     </script>
     <script type="text/template" id="university-description-template">
-        <div><a href="<%= model.url %>"><%= model.name %></a></div>
+        <div><h2><a href="<%= model.url %>"><%= model.name %></a></h2></div>
+    </script>
+    <script type="text/template" id="course-template">
+        <div class="course_image_container"><img src="<%= model.image_url %>" alt="<%= model.title %>"></div>
+        <div><h3><%= model.title %></h3></div>
+        <div><%= model.description %></div>
     </script>
 
 	<script type="text/javascript" src="js/vendor/jquery-2.2.1.min.js"></script>
