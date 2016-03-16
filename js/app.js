@@ -25,16 +25,17 @@ var App = Marionette.Application.extend({
   	},
   	displayCurrentUniversity : function(index){
   		this.currentUniversityIndex = index;
+  		//display university description
   		var university = this.universities.at(index);
   		this.universityDescriptionView = new App.UniversityDescriptionView({model : university});
   		this.universityDescriptionRegion.show(this.universityDescriptionView);
 
+  		//display that universities courses
   		var courses = new App.CoursesCollection();
   		if(this.config.env != 'local'){
   			var courses_url_suffix = courses.url();
   			courses.url =  function(){ return university.get('url') + courses_url_suffix };
   		}
-  		console.log(courses.url());
 		var promise = courses.fetch();
   		var app = this;
   		promise.done(function(){
@@ -49,7 +50,6 @@ var App = Marionette.Application.extend({
   		app.displayCurrentUniversity(parentList.index(currentItem));
   	}
 });
-
 
 
 App.University = Backbone.Model.extend({
@@ -78,12 +78,9 @@ App.UniversitiesCollection = Backbone.Collection.extend({
 });
 
 App.Course = Backbone.Model.extend({
-
 });
 
 App.CoursesCollection = Backbone.Collection.extend({
-	initialize: function(){
-	},
 	model: App.Course,
 	url: function(){
 		if(app.config.env != 'local'){
@@ -136,8 +133,6 @@ App.CoursesCollectionView = Marionette.CollectionView.extend({
 });
 
 App.UniversityDescriptionView = Marionette.ItemView.extend({
-  initialize : function(){
-  },
   template: function(data){ 
   		var template = _.template($('#university-description-template').html());
   		return  template({model: data});
