@@ -78,6 +78,10 @@ App.UniversitiesCollection = Backbone.Collection.extend({
 });
 
 App.Course = Backbone.Model.extend({
+	parse: function(response){
+		response.image_url = response.image_url || '';
+		return response;
+	}
 });
 
 App.CoursesCollection = Backbone.Collection.extend({
