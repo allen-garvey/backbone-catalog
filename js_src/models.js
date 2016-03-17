@@ -20,7 +20,8 @@ App.UniversitiesCollection = Backbone.Collection.extend({
 		return 'testdata-universities.json';
 	},
 	parse: function(response) {
-    	return response.data;
+    	//assume if there is no logo url the university is not set up
+    	return _.filter(response.data, function(university){return university.attributes.logo_url;});
   	}
 });
 
