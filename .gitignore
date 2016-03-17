@@ -18,3 +18,7 @@ Thumbs.db
 *.eot
 *.woff
 *.zip
+css/style.css
+js/app.js
+js/app.min.js
+js/app.js.map
