@@ -2,7 +2,7 @@
 App.UniversityItemView = Marionette.ItemView.extend({
   tagName : 'li',
   template: function(data){ 
-  		var template = _.template($('#university-item-template').html());
+  		var template = Marionette.TemplateCache.get('#university-item-template');
   		return  template({model: data});
 	}
 });
@@ -19,7 +19,7 @@ App.CourseItemView = Marionette.ItemView.extend({
   tagName : 'li',
   className : 'course_box',
   template: function(data){ 
-  		var template = _.template($('#course-template').html());
+        var template = Marionette.TemplateCache.get('#course-template');
   		return  template({model: data});
 	}
 });
@@ -34,7 +34,9 @@ App.CoursesCollectionView = Marionette.CollectionView.extend({
 
 App.UniversityDescriptionView = Marionette.ItemView.extend({
   template: function(data){ 
-  		var template = _.template($('#university-description-template').html());
+  		var template = Marionette.TemplateCache.get('#university-description-template'); 
   		return  template({model: data});
 	}
 });
+
+
