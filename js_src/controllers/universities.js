@@ -26,6 +26,7 @@ App.UniversitiesController = function(app){
   		});
   	};
 
+  	//can't use this because function is called from flipster jQuery plugin
 	this.universityClicked = function(currentItem, previousItem){
   		var parentList = $('#universities-nav li');
   		controller.displayCurrentUniversity(parentList.index(currentItem));
