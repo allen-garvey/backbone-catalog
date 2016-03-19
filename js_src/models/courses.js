@@ -16,7 +16,7 @@ App.CoursesCollection = Backbone.Collection.extend({
 		if(app.config.env != 'local'){
 			return this.parentUniversity.get('url') + '/knowledgelink-api/courses/?courses=all';
 		}
-		return 'testdata/courses.json';
+		return 'testdata/courses' + _.random(1, 10) + '.json';
 	},
 	parse: function(response) {
     	var data = _.map(response, function(val, key){ 
