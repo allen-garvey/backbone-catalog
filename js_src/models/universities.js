@@ -10,8 +10,6 @@ App.University = Backbone.Model.extend({
 });
 
 App.UniversitiesCollection = Backbone.Collection.extend({
-	initialize: function(){
-	},
 	model: App.University,
 	url: function(){
 		if(app.config.env != 'local'){
