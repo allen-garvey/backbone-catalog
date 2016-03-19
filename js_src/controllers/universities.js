@@ -20,11 +20,7 @@ App.UniversitiesController = function(app){
   		this.app.universityDescriptionRegion.show(this.universityDescriptionView);
 
   		//display that universities courses
-  		var courses = new App.CoursesCollection();
-  		if(this.app.config.env != 'local'){
-  			var courses_url_suffix = courses.url();
-  			courses.url =  function(){ return university.get('url') + courses_url_suffix };
-  		}
+  		var courses = new App.CoursesCollection({parentUniversity: university});
   		var controller = this;
 		var promise = courses.fetch();
   		promise.done(function(){

@@ -8,10 +8,13 @@ App.Course = Backbone.Model.extend({
 });
 
 App.CoursesCollection = Backbone.Collection.extend({
+	initialize: function(options){
+		this.parentUniversity = options.parentUniversity;
+	},
 	model: App.Course,
 	url: function(){
 		if(app.config.env != 'local'){
-			return '/knowledgelink-api/courses/?courses=all';
+			return this.parentUniversity.get('url') + '/knowledgelink-api/courses/?courses=all';
 		}
 		return 'testdata/courses.json';
 	},
@@ -20,7 +23,6 @@ App.CoursesCollection = Backbone.Collection.extend({
     		return val; }
     		);
     	return data;
-  	},
-  	parentUniversity : 'hello'
+  	}
 });
 
