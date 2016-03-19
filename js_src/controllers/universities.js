@@ -19,11 +19,8 @@ App.UniversitiesController = function(app){
   		this.universityDescriptionView = new App.UniversityDescriptionView({model : university});
   		this.app.universityDescriptionRegion.show(this.universityDescriptionView);
 
-  		//display that universities courses
-  		var courses = new App.CoursesCollection({parentUniversity: university});
   		var controller = this;
-		var promise = courses.fetch();
-  		promise.done(function(){
+  		university.actionForCourses(function(courses){
   			var coursesView = new App.CoursesCollectionView({collection: courses});
   			controller.app.courseListRegion.show(coursesView);
   		});
