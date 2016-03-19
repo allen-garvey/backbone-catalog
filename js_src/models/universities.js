@@ -14,7 +14,6 @@ App.University = Backbone.Model.extend({
 	//if courses have not been fetched will fetch first
 	actionForCourses : function(callback){
 		if(this.coursesFetched){
-			console.log("courses already fetched");
 			callback(this.coursesCollection);
 			return;
 		}
