@@ -15,22 +15,6 @@ App.UniversitiesCollectionView = Marionette.CollectionView.extend({
 
 });
 
-App.CourseItemView = Marionette.ItemView.extend({
-  tagName : 'li',
-  className : 'course_box',
-  template: function(data){ 
-        var template = Marionette.TemplateCache.get('#course-template');
-  		return  template({model: data});
-	}
-});
-
-App.CoursesCollectionView = Marionette.CollectionView.extend({
-	tagName : 'ul',
-	id : 'university-course-list',
-	className: 'container',
-	childView: App.CourseItemView
-
-});
 
 App.UniversityDescriptionView = Marionette.ItemView.extend({
   template: function(data){ 
