@@ -20,7 +20,7 @@ var SASS_OPTIONS = {
 };
 
 gulp.task('concatScripts', function(){
-	return gulp.src(['application', 'models/universities', 'models/courses', 'views/universities', 'views/courses'].map(function(file){return JS_SOURCE_DIR + file + '.js';}))
+	return gulp.src(['application', 'controllers/universities', 'models/universities', 'models/courses', 'views/universities', 'views/courses'].map(function(file){return JS_SOURCE_DIR + file + '.js';}))
 		.pipe(maps.init())
 		.pipe(concat(DIST_NAME + '.js'))
 		.pipe(maps.write('./'))
