@@ -27,14 +27,12 @@ App.UniversitiesController = function(app){
   			var coursesView = new App.CoursesCollectionView({collection: courses});
   			controller.app.courseListRegion.show(coursesView);
   		});
-
-
   	};
 
 	this.universityClicked = function(currentItem, previousItem){
   		var parentList = $('#universities-nav li');
   		controller.displayCurrentUniversity(parentList.index(currentItem));
   	}
-
-
 };
+
+
