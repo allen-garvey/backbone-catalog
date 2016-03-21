@@ -6,16 +6,22 @@ App.UniversitiesController = function(app){
 	promise.done(function(){
 		controller.universitiesView = new App.UniversitiesCollectionView({collection: controller.universities});
 		app.headerRegion.show(controller.universitiesView);
-		$('#universities-header').flipster({onItemSwitch: controller.universityClicked, start: 0 });
-		controller.displayUniversity();
+        $('#universities-header').flipster({onItemSwitch: controller.universityClicked});
+        
+        if(_.isUndefined(controller.currentUniversityId)){
+            var currentUniversity = controller.universities.at(0);
+            controller.currentUniversityId = currentUniversity.get('id');
+        }
+        else{
+            var currentUniversity = controller.universities.get(controller.currentUniversityId);
+        }
+		controller.displayUniversity(currentUniversity);
 	});
 
 	
 	this.displayUniversity = function(university){
-        if(_.isUndefined(university)){
-            university = this.universities.at(0);
-        }
         this.app.universitiesRouter.navigate('university/' + university.get('id'));
+        $('#universities-header').flipster('jump', this.universities.findIndex(university));
 
     	this.universityDescriptionView = new App.UniversityDescriptionView({model : university});
     	this.app.universityDescriptionRegion.show(this.universityDescriptionView);
@@ -28,8 +34,13 @@ App.UniversitiesController = function(app){
     };
 
     this.showUniversity = function(id){
+        this.currentUniversityId = id;
         var university = this.universities.get(id);
-        $('#universities-header').flipster('jump', this.universities.findIndex(university));
+        //universities haven't loaded yet via ajax
+        if(_.isUndefined(university)){
+            return;
+        }
+        
         this.displayUniversity(university);
     };
 
@@ -37,6 +48,7 @@ App.UniversitiesController = function(app){
     this.universityClicked = function(currentItem, previousItem){
     	var parentList = $('#universities-nav li');
         var currentUniversity = controller.universities.at(parentList.index(currentItem));
+        controller.currentUniversity = currentUniversity;
     	controller.displayUniversity(currentUniversity);
     }
 };
