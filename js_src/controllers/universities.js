@@ -8,12 +8,10 @@ App.UniversitiesController = function(app){
 		app.headerRegion.show(controller.universitiesView);
         $('#universities-header').flipster({onItemSwitch: controller.universityClicked});
         
-        if(_.isUndefined(controller.currentUniversityId)){
-            var currentUniversity = controller.universities.at(0);
+        var currentUniversity = controller.universities.get(controller.currentUniversityId);
+        if(_.isUndefined(currentUniversity)){
+            currentUniversity = controller.universities.at(0);
             controller.currentUniversityId = currentUniversity.get('id');
-        }
-        else{
-            var currentUniversity = controller.universities.get(controller.currentUniversityId);
         }
 		controller.displayUniversity(currentUniversity);
 	});
