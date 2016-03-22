@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "setup": "gulp & if [ ! -f ./inc/environment.php ]; then cp ./inc/environment_example.php ./inc/environment.php; fi"
+    "setup": "gulp & if [ ! -f ./inc/environment.php ]; then cp ./inc/environment_example.php ./inc/environment.php; fi",
+    "push": "git push & git push github master"
   },
   "repository": {
     "type": "git",
